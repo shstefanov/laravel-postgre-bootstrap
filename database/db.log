@@ -2,26 +2,6 @@
 drop schema public cascade;
 **************************
 
-********* QUERY **********
-create schema public;
-**************************
-
-CREATE SCHEMA
-********* QUERY **********
-create table public.users(
-	id         integer PRIMARY KEY,
-	username   vrachar(24),
-	password   varchar(64),
-	email      varchar(32),
-	created_at date,
-	updated_at date
-);
-**************************
-
-********* QUERY **********
-drop schema public cascade;
-**************************
-
 DROP SCHEMA
 ********* QUERY **********
 create schema public;
@@ -29,70 +9,49 @@ create schema public;
 
 CREATE SCHEMA
 ********* QUERY **********
-create table public.users(
-	id         integer PRIMARY KEY,
-	username   varchar(24),
-	password   varchar(64),
-	email      varchar(32),
-	created_at date,
-	updated_at date
+create table public.users(
+	id         integer PRIMARY KEY,
+	username   varchar(24),
+	password   varchar(64),
+	email      varchar(32) UNIQUE,
+	created_at date,
+	updated_at date
 );
 **************************
 
 CREATE TABLE
 ********* QUERY **********
-drop schema public cascade;
-**************************
-
-DROP SCHEMA
-********* QUERY **********
-create schema public;
-**************************
-
-CREATE SCHEMA
-********* QUERY **********
-create table public.users(
-	id         integer PRIMARY KEY,
-	username   varchar(24),
-	password   varchar(64),
-	email      varchar(32),
-	created_at date,
-	updated_at date
+create table public.password_resets (
+  email       varchar(32),
+  token       varchar(256),
+  created_at  date
 );
 **************************
 
 CREATE TABLE
-        List of relations
- Schema | Name  | Type  |  Owner  
---------+-------+-------+---------
- public | users | table | laravel
-(1 row)
-
 ********* QUERY **********
-drop schema public cascade;
+create index on public.password_resets (email);
 **************************
 
-DROP SCHEMA
+CREATE INDEX
 ********* QUERY **********
-create schema public;
+create index on public.password_resets (token);
 **************************
 
-CREATE SCHEMA
-********* QUERY **********
-create table public.users(
-	id         integer PRIMARY KEY,
-	username   varchar(24),
-	password   varchar(64),
-	email      varchar(32),
-	created_at date,
-	updated_at date
-);
-**************************
+CREATE INDEX
+             List of relations
+ Schema |      Name       | Type  |  Owner  
+--------+-----------------+-------+---------
+ public | password_resets | table | laravel
+ public | users           | table | laravel
+(2 rows)
 
-CREATE TABLE
-        List of relations
- Schema | Name  | Type  |  Owner  
---------+-------+-------+---------
- public | users | table | laravel
-(1 row)
+                           List of relations
+ Schema |           Name            | Type  |  Owner  |      Table      
+--------+---------------------------+-------+---------+-----------------
+ public | password_resets_email_idx | index | laravel | password_resets
+ public | password_resets_token_idx | index | laravel | password_resets
+ public | users_email_key           | index | laravel | users
+ public | users_pkey                | index | laravel | users
+(4 rows)
 
