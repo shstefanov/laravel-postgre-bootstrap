@@ -1,0 +1,118 @@
+http://packalyst.com/packages/package/webpatser/laravel-uuid
+
+Laravel package to generate a UUID according to the RFC 4122 standard. Only support for version 1, 3, 4 and 5 UUID are built-in.
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/jenssegers/date
+
+A date library to help you work with dates in different languages
+_____________________________________________________________________________________________________
+
+[!!! 5 !!!]
+http://packalyst.com/packages/package/xethron/migrations-generator
+
+Generates Laravel Migrations from an existing database
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/mccool/laravel-auto-presenter
+
+A system for auto-decorating models with presenter objects.
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/baum/baum
+
+Baum is an implementation of the Nested Set pattern for Eloquent models.
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/laracasts/validation
+
+Easy validation for Laravel applications.
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/frozennode/administrator
+
+A database interface package for Laravel
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/dingo/api
+
+A RESTful API package for the Laravel framework.
+_____________________________________________________________________________________________________
+
+[!!! 5 !!!]
+http://packalyst.com/packages/package/barryvdh/laravel-cors
+
+Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/indatus/dispatcher
+
+Schedule your artisan commands within your application
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/jenssegers/mongodb
+
+A MongoDB based Eloquent model and Query builder for Laravel 4
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/jenssegers/agent
+
+A user agent class for Laravel
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/maatwebsite/excel
+
+An eloquent way of importing and exporting Excel and CSV in Laravel 4 with the power of PHPExcel
+_____________________________________________________________________________________________________
+
+[!!! 5 !!!]
+http://packalyst.com/packages/package/barryvdh/laravel-debugbar
+
+PHP Debugbar integration for Laravel
+
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/thomaswelton/laravel-gravatar
+
+Laravel 4 Gravatar helper
+_____________________________________________________________________________________________________
+
+http://packalyst.com/packages/package/shift31/laravel-elasticsearch
+
+A Laravel Service Provider for the Elasticsearch API client
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/league/factory-muffin
+
+http://packalyst.com/packages/package/league/factory-muffin
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/orangehill/iseed
+
+Generate a new Laravel database seed file based on data from the existing database table.
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/jyggen/curl
+
+A simple and lightweight cURL library with support for multiple requests in parallel.
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/yangqi/htmldom
+
+Simple Html Dom Parser for Laravel 4
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/torann/geoip
+
+Supports the two main GeoIP services (infoDB and Maxmind).
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/brainboxlabs/brain-socket
+
+Websockets for event-driven Laravel apps.
+_____________________________________________________________________________________________________ 
+
+http://packalyst.com/packages/package/jenssegers/mongodb-session
+
+A MongoDB session driver for Laravel 4
+_____________________________________________________________________________________________________ 
