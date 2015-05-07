@@ -1,0 +1,98 @@
+********* QUERY **********
+drop schema public cascade;
+**************************
+
+********* QUERY **********
+create schema public;
+**************************
+
+CREATE SCHEMA
+********* QUERY **********
+create table public.users(
+	id         integer PRIMARY KEY,
+	username   vrachar(24),
+	password   varchar(64),
+	email      varchar(32),
+	created_at date,
+	updated_at date
+);
+**************************
+
+********* QUERY **********
+drop schema public cascade;
+**************************
+
+DROP SCHEMA
+********* QUERY **********
+create schema public;
+**************************
+
+CREATE SCHEMA
+********* QUERY **********
+create table public.users(
+	id         integer PRIMARY KEY,
+	username   varchar(24),
+	password   varchar(64),
+	email      varchar(32),
+	created_at date,
+	updated_at date
+);
+**************************
+
+CREATE TABLE
+********* QUERY **********
+drop schema public cascade;
+**************************
+
+DROP SCHEMA
+********* QUERY **********
+create schema public;
+**************************
+
+CREATE SCHEMA
+********* QUERY **********
+create table public.users(
+	id         integer PRIMARY KEY,
+	username   varchar(24),
+	password   varchar(64),
+	email      varchar(32),
+	created_at date,
+	updated_at date
+);
+**************************
+
+CREATE TABLE
+        List of relations
+ Schema | Name  | Type  |  Owner  
+--------+-------+-------+---------
+ public | users | table | laravel
+(1 row)
+
+********* QUERY **********
+drop schema public cascade;
+**************************
+
+DROP SCHEMA
+********* QUERY **********
+create schema public;
+**************************
+
+CREATE SCHEMA
+********* QUERY **********
+create table public.users(
+	id         integer PRIMARY KEY,
+	username   varchar(24),
+	password   varchar(64),
+	email      varchar(32),
+	created_at date,
+	updated_at date
+);
+**************************
+
+CREATE TABLE
+        List of relations
+ Schema | Name  | Type  |  Owner  
+--------+-------+-------+---------
+ public | users | table | laravel
+(1 row)
+
