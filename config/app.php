@@ -137,15 +137,16 @@ return [
 		'Illuminate\View\ViewServiceProvider',
     'Way\Generators\GeneratorsServiceProvider',
     'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider',
+    'Orangehill\Iseed\IseedServiceProvider',
 
-		/*
-		 * Application Service Providers...
-		 */
-		'App\Providers\AppServiceProvider',
-		'App\Providers\BusServiceProvider',
-		'App\Providers\ConfigServiceProvider',
-		'App\Providers\EventServiceProvider',
-		'App\Providers\RouteServiceProvider',
+    /*
+     * Application Service Providers...
+     */
+    'App\Providers\AppServiceProvider',
+    'App\Providers\BusServiceProvider',
+    'App\Providers\ConfigServiceProvider',
+    'App\Providers\EventServiceProvider',
+    'App\Providers\RouteServiceProvider',
 
 	],
 

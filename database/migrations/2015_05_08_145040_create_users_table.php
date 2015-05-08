@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::create('users', function(Blueprint $table)
 		{
-			$table->integer('id')->primary('users_pkey');
+			$table->integer('id', true);
 			$table->string('username', 24)->nullable();
 			$table->string('password', 64)->nullable();
 			$table->string('email', 32)->nullable()->unique('users_email_key');

@@ -11,7 +11,8 @@
     "way/generators": "dev-feature/laravel-five-stable",
     "xethron/migrations-generator": "dev-l5",
     "phpunit/phpunit": "~4.0",
-    "phpspec/phpspec": "~2.1"
+    "phpspec/phpspec": "~2.1",
+    "orangehill/iseed": "dev-master"
   },
 
   "repositories": [
