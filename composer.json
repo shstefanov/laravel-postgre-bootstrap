@@ -8,7 +8,6 @@
     "laravel/framework": "5.0.*"
   },
   "require-dev": {
-    "xethron/migrations-generator": "dev-l5",
     "way/generators": "dev-feature/laravel-five-stable",
     "phpunit/phpunit": "~4.0",
     "phpspec/phpspec": "~2.1"
