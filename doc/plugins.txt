@@ -1,3 +1,26 @@
+[!!! 5 !!!]
+http://packalyst.com/packages/package/maatwebsite/excel
+
+An eloquent way of importing and exporting Excel and CSV in Laravel 4 with the power of PHPExcel
+_____________________________________________________________________________________________________
+[!!! 5 !!!]
+http://packalyst.com/packages/package/barryvdh/laravel-debugbar
+
+PHP Debugbar integration for Laravel
+_____________________________________________________________________________________________________
+
+[!!! 5 !!!]
+http://packalyst.com/packages/package/xethron/migrations-generator
+
+Generates Laravel Migrations from an existing database
+_____________________________________________________________________________________________________
+
+[!!! 5 !!!]
+http://packalyst.com/packages/package/barryvdh/laravel-cors
+
+Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application
+_____________________________________________________________________________________________________
+
 http://packalyst.com/packages/package/webpatser/laravel-uuid
 
 Laravel package to generate a UUID according to the RFC 4122 standard. Only support for version 1, 3, 4 and 5 UUID are built-in.
@@ -6,12 +29,6 @@ ________________________________________________________________________________
 http://packalyst.com/packages/package/jenssegers/date
 
 A date library to help you work with dates in different languages
-_____________________________________________________________________________________________________
-
-[!!! 5 !!!]
-http://packalyst.com/packages/package/xethron/migrations-generator
-
-Generates Laravel Migrations from an existing database
 _____________________________________________________________________________________________________
 
 http://packalyst.com/packages/package/mccool/laravel-auto-presenter
@@ -39,12 +56,6 @@ http://packalyst.com/packages/package/dingo/api
 A RESTful API package for the Laravel framework.
 _____________________________________________________________________________________________________
 
-[!!! 5 !!!]
-http://packalyst.com/packages/package/barryvdh/laravel-cors
-
-Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application
-_____________________________________________________________________________________________________
-
 http://packalyst.com/packages/package/indatus/dispatcher
 
 Schedule your artisan commands within your application
@@ -58,18 +69,6 @@ ________________________________________________________________________________
 http://packalyst.com/packages/package/jenssegers/agent
 
 A user agent class for Laravel
-_____________________________________________________________________________________________________
-
-http://packalyst.com/packages/package/maatwebsite/excel
-
-An eloquent way of importing and exporting Excel and CSV in Laravel 4 with the power of PHPExcel
-_____________________________________________________________________________________________________
-
-[!!! 5 !!!]
-http://packalyst.com/packages/package/barryvdh/laravel-debugbar
-
-PHP Debugbar integration for Laravel
-
 _____________________________________________________________________________________________________
 
 http://packalyst.com/packages/package/thomaswelton/laravel-gravatar
