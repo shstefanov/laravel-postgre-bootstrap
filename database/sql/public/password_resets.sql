@@ -4,5 +4,5 @@ create table public.password_resets (
   created_at  date
 );
 
-create index on public.password_resets (email);
-create index on public.password_resets (token);
+create index password_resets_email on public.password_resets (email);
+create index password_resets_token on public.password_resets (token);
