@@ -3,3 +3,4 @@
 .env
 logs
 database/db.log
+public/dist
