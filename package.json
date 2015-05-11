@@ -26,6 +26,7 @@
     "ractive": "latest",
     "ractive-loader": "latest",
     "raw-loader": "latest",
+    "sass-loader": "latest",
     "script-loader": "latest",
     "source-map-loader": "latest",
     "style-loader": "latest",

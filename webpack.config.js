@@ -12,19 +12,19 @@ require.extensions['.yml'] = function(module, filename) {
 var bulk              = require('bulk-require');
 var config            = JSON.stringify(bulk(path.join(__dirname,"config/frontend"), ['**/*.js','**/*.json', '**/*.yml']));
 
-var imagesPathPattern = "public/dist/images/[hash].[ext]";
-var imagesOptions     = "url?limit=1&name="+imagesPathPattern+"&minetype=image/{ext}";
+var assetsPathPattern = "public/dist/{destination}/[hash].[ext]";
+var assetsOptions     = "url?limit=1&name="+assetsPathPattern+"&minetype=image/{ext}";
 
 module.exports    = {
   // context:  "./", // The root folder, default - process.cwd()
 
   entry: {
-    app:    "./frontend/app.js",
-    test:   "./tests/test.js",
+    app:          "./frontend/app.js",
+    test:         "./tests/test.js",
   },
 
   output: {
-      filename: "./public/dist/js/[name].bundle.js",
+      filename:   "./public/dist/js/[name].bundle.js",
       publicPath: '/',
   },
 
@@ -56,19 +56,18 @@ module.exports    = {
       { test: /\.js$/,                     loader: "transform?bulkify"                   },
       { test: /\.js$/,                     loader: "source-map"                          },
 
-      { test: /\.less$/,loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer!less-loader")},
-      { test: /\.scss$/,loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer!sass-loader")},
-      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer")},
+      { test: /\.less$/,                   loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer!less-loader"   )},
+      { test: /\.scss$/,                   loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer!sass-loader"   )},
+      { test: /\.css$/,                    loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer"               )},
 
+      { test: /\.gif/i,                    loader: assetsOptions.replace("{destination}", "images").replace("{ext}","gif" )  },
+      { test: /\.jpe?g/i,                  loader: assetsOptions.replace("{destination}", "images").replace("{ext}","jpg" )  },
+      { test: /\.png/i,                    loader: assetsOptions.replace("{destination}", "images").replace("{ext}","png" )  },
+      { test: /\.svg/i,                    loader: assetsOptions.replace("{destination}", "images").replace("{ext}","svg" )  },
 
-      { test: /\.gif/i,                    loader: imagesOptions.replace("{ext}","gif")  },
-      { test: /\.jpe?g/i,                  loader: imagesOptions.replace("{ext}","jpg")  },
-      { test: /\.png/i,                    loader: imagesOptions.replace("{ext}","png")  },
-      { test: /\.svg/i,                    loader: imagesOptions.replace("{ext}","svg")  },
-
-      { test: /\.woff/i,                   loader: imagesOptions.replace("{ext}","woff")  },
-      { test: /\.eot/i,                    loader: imagesOptions.replace("{ext}","eot")   },
-      { test: /\.ttf/i,                    loader: imagesOptions.replace("{ext}","ttf")   },
+      { test: /\.woff/i,                   loader: assetsOptions.replace("{destination}", "fonts") .replace("{ext}","woff")  },
+      { test: /\.eot/i,                    loader: assetsOptions.replace("{destination}", "fonts") .replace("{ext}","eot" )  },
+      { test: /\.ttf/i,                    loader: assetsOptions.replace("{destination}", "fonts") .replace("{ext}","ttf" )  },
 
     ]
   },
@@ -78,7 +77,7 @@ module.exports    = {
     new webpack.DefinePlugin({APP_CONFIG: config}),
 
     new ExtractTextPlugin("./public/dist/css/app.bundle.css", {
-      allChunks: false
+      allChunks: true
     })
 
   ]

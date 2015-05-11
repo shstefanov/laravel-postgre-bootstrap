@@ -45,17 +45,16 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	var App = __webpack_require__(2);
+	var App = __webpack_require__(1);
 
 
-	console.log(({"app":__webpack_require__(4)}));
+	__webpack_require__(2);
 
-	console.log(__webpack_require__(3));
+	console.log(__webpack_require__(6));
 
 
 /***/ },
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -65,19 +64,39 @@
 
 
 /***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	module.exports = ({"app":__webpack_require__(3),"app1":__webpack_require__(4),"app2":__webpack_require__(5)});
+
+
+
+/***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// CONFIG
-
-	module.exports = ({"something":{"a":5,"b":6},"thing2":{"aaa":"somejson","bbb":["other json"]},"thing3":{"database":{"something":"alabala yaml"}}});
-
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	module.exports = ({"something":{"a":5,"b":6},"thing2":{"aaa":"somejson","bbb":["other json"]},"thing3":{"database":{"something":"alabala yaml"}}});
+
 
 /***/ }
 /******/ ]);

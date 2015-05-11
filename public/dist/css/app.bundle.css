@@ -252,8 +252,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/public/dist/images/f4769f9bdb7466be65088239c12046d1.eot);
-  src: url(/public/dist/images/f4769f9bdb7466be65088239c12046d1.eot?#iefix) format('embedded-opentype'), url(/public/dist/images/fa2772327f55d8198301fdb8bcfc8158.woff) format('woff'), url(/public/dist/images/e18bbf611f2a2e43afc071aa2f4e1512.ttf) format('truetype'), url(/public/dist/images/89889688147bd7575d6327160d64e760.svg#glyphicons_halflingsregular) format('svg');
+  src: url(/public/dist/fonts/f4769f9bdb7466be65088239c12046d1.eot);
+  src: url(/public/dist/fonts/f4769f9bdb7466be65088239c12046d1.eot?#iefix) format('embedded-opentype'), url(/public/dist/fonts/fa2772327f55d8198301fdb8bcfc8158.woff) format('woff'), url(/public/dist/fonts/e18bbf611f2a2e43afc071aa2f4e1512.ttf) format('truetype'), url(/public/dist/images/89889688147bd7575d6327160d64e760.svg#glyphicons_halflingsregular) format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6249,3 +6249,16 @@ label,
 .checkbox label {
   font-weight: 300;
 }
+.some-namespace .sub-selector {
+  background: white;
+}
+.other-selector ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.other-selector li {
+  display: inline-block; }
+.other-selector a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none; }
