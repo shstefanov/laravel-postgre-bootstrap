@@ -1,7 +1,44 @@
 {
-  "private": true,
+  "name": "laravel-project",
+  "version": "0.0.1",
+  "private": false,
+  "author": {
+    "name": "Stefan Stefanov",
+    "email": "s.h.stefanov@mail.bg"
+  },
   "devDependencies": {
     "gulp": "^3.8.8",
-    "laravel-elixir": "*"
+    "laravel-elixir": "*",
+    "autoprefixer-loader": "latest",
+    "backbone": "latest",
+    "brfs": "latest",
+    "bulk-require": "latest",
+    "bulkify": "latest",
+    "css-loader": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "html-minifyify": "latest",
+    "i18next-client": "latest",
+    "imports-loader": "latest",
+    "jasminify": "latest",
+    "less": "latest",
+    "less-loader": "latest",
+    "ractive": "latest",
+    "ractive-loader": "latest",
+    "raw-loader": "latest",
+    "script-loader": "latest",
+    "source-map-loader": "latest",
+    "style-loader": "latest",
+    "transform-loader": "latest",
+    "uglify-loader": "latest",
+    "underscore": "latest",
+    "url-loader": "latest",
+    "webpack": "latest",
+    "yaml-loader": "latest"
+  },
+  "scripts": {
+    "start": "rm -rf public/dist && webpack --watch",
+    "build": "rm -rf public/dist && webpack",
+    "postinstall": "npm ls > logs/versions.log"
   }
 }
