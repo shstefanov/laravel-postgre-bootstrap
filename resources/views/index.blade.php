@@ -44,5 +44,9 @@
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
+
+
+    <script type="text/javascript" src="/dist/js/app.bundle.js"></script>
+
 	</body>
 </html>

@@ -2,9 +2,15 @@ var fs                = require("fs");
 var path              = require("path");
 var webpack           = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var YAML              = require('yamljs');
+
+require.extensions['.yml'] = function(module, filename) {
+  var yaml_string = fs.readFileSync(filename, 'utf8').toString();
+  module.exports = YAML.parse(yaml_string);
+};
 
 var bulk              = require('bulk-require');
-var config            = JSON.stringify(bulk(__dirname, ['config/frontend/**/*.js','config/frontend/**/*.json']).config.frontend);
+var config            = JSON.stringify(bulk(path.join(__dirname,"config/frontend"), ['**/*.js','**/*.json', '**/*.yml']));
 
 var imagesPathPattern = "public/dist/images/[hash].[ext]";
 var imagesOptions     = "url?limit=1&name="+imagesPathPattern+"&minetype=image/{ext}";
@@ -18,7 +24,7 @@ module.exports    = {
   },
 
   output: {
-      filename: "./public/dist/js/[name].js",
+      filename: "./public/dist/js/[name].bundle.js",
       publicPath: '/',
   },
 
@@ -60,6 +66,10 @@ module.exports    = {
       { test: /\.png/i,                    loader: imagesOptions.replace("{ext}","png")  },
       { test: /\.svg/i,                    loader: imagesOptions.replace("{ext}","svg")  },
 
+      { test: /\.woff/i,                   loader: imagesOptions.replace("{ext}","woff")  },
+      { test: /\.eot/i,                    loader: imagesOptions.replace("{ext}","eot")   },
+      { test: /\.ttf/i,                    loader: imagesOptions.replace("{ext}","ttf")   },
+
     ]
   },
 
@@ -67,7 +77,7 @@ module.exports    = {
 
     new webpack.DefinePlugin({APP_CONFIG: config}),
 
-    new ExtractTextPlugin("./public/dist/css/victus.bundle.css", {
+    new ExtractTextPlugin("./public/dist/css/app.bundle.css", {
       allChunks: false
     })
 
