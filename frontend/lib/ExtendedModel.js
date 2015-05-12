@@ -65,7 +65,7 @@ var ExtendedModel = Backbone.Model.extend({
   },
 
 });
-AdvancedModel.__className = "Class_Model_AdvancedModel";
-AdvancedModel.extend = Class.extend;
+ExtendedModel.__className = "Class_Model_ExtendedModel";
+ExtendedModel.extend = Class.extend;
 
-module.exports = AdvancedModel;
+module.exports = ExtendedModel;
