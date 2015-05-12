@@ -90,6 +90,34 @@ module.exports = {
       }, 0);
     });
     if(!Array.isArray(arr)) delete arr.forEach;
-  }
+  },
+
+  defaultize: function(base, target){
+    if(Array.isArray(target)) target.forEach(function(t){_.defaults(t, base)});
+    else{
+      for(var key in target){
+        _.defaults(target[key], base);
+      }
+    }
+    return target;
+  },
+
+  instantiate: function(objects, Prototype){
+    if(_.isArray(objects)){
+      return objects.map(function(object){
+        return new Prototype(object);
+      });
+    }
+    else if(_.isObject(objects)){
+      var result = {};
+      for(var key in objects){
+        result[key] = new Prototype(objects[key]);
+      }
+      return result;
+    }
+    else{
+      return new Prototype(objects);
+    }
+  },
   
 };
