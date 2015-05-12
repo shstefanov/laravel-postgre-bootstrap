@@ -1,7 +1,13 @@
-
-var App = require("App");
 var bulk = require("bulk-require");
-
-require("styles");
-
-console.log(require("config"));
+var App  = require("App");
+require("styles"   );
+require("resources");
+require("templates");
+var views       = bulk(__dirname+"/views",       ["**/*.js", "**/*.coffee"]);
+var models      = bulk(__dirname+"/models",      ["**/*.js", "**/*.coffee"]);
+var app         = require("app");
+app.setupControllers();
+app.router.bindRoutes();
+app.router.startHistory();
+console.log(app);
+ 

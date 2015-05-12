@@ -32,11 +32,12 @@ module.exports    = {
     alias: {
       "App":        path.join(process.cwd(), "frontend/lib/classes.js"),
       "helpers":    path.join(process.cwd(), "frontend/lib/helpers.js"),
-      "app":        path.join(process.cwd(), "frontend/instances/app.js"),
       "config":     path.join(process.cwd(), "frontend/instances/config.js"),
-      "api":        path.join(process.cwd(), "frontend/instances/api.js"),
+      "app":        path.join(process.cwd(), "frontend/instances/app.js"),
       "resources":  path.join(process.cwd(), "frontend/resources/resources.js"),
       "data":       path.join(process.cwd(), "frontend/data/data.js"),
+      
+      "api":        path.join(process.cwd(), "frontend/instances/api.js"),
       "templates":  path.join(process.cwd(), "frontend/instances/templates.js"),
       "styles":     path.join(process.cwd(), "frontend/instances/styles.js")
     }
@@ -55,6 +56,7 @@ module.exports    = {
       { test: /\.html$/,                   loader: "transform?html-minifyify!ractive"    },
       { test: /\.js$/,                     loader: "transform?bulkify"                   },
       { test: /\.js$/,                     loader: "source-map"                          },
+      { test: /\.coffee$/,                 loader: "source-map!coffee-loader"            },
 
       { test: /\.less$/,                   loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer!less-loader"   )},
       { test: /\.scss$/,                   loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!autoprefixer!sass-loader"   )},

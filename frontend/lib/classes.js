@@ -7,5 +7,7 @@ module.exports = {
   ExtendedModel:      require("./ExtendedModel.js"),
   ExtendedCollection: require("./ExtendedCollection.js"),
   Router:             require("./Router.js"),
-  View:               require("./View.js")
-}
+  View:               require("./View.js"),
+  Controller:         require("./Controller.js"),
+  AppController:      require("./AppController.js")
+};
