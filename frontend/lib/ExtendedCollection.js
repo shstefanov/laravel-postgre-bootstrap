@@ -190,18 +190,17 @@ module.exports = BaseCollection.extend("ExtendedCollection", {
   bindAll: function(evt, method, ctx){
     var marker = this._eventMarkers[evt];
     if(!marker) marker = this._eventMarkers[evt] = {};
-    var bind   = function(model){ model.on (evt, method, ctx || model) };
-    var unbind = function(model){ model.off(evt, method, ctx || model) };
-    this.on("add", bind, marker).on("remove", unbind, marker);
+    var bind     = function(model){ model.on (evt, method, ctx || model) };
+    var unbind   = function(model){ model.off(evt, method, ctx || model) };
+    var bind_all = function(coll ){ coll.each(bind); };
+    this.on("add", bind, marker).on("remove", unbind, marker).on("reset", bind_all, marker);
     this.each(bind);
     return this;
   },
 
   unbindAll: function(evt, method, ctx){
     var marker = this._eventMarkers[evt];
-    this
-    .off("add",    method || null, marker)
-    .off("remove", method || null, marker);
+    this.off(null, method || null, marker);
     this.each(function(model){model.off(evt, method || null, ctx || model)});
     delete this._eventMarkers[evt];
     return this;

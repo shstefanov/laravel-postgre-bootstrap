@@ -1,0 +1,13 @@
+<div class="screen" style="display: {{visibility.createUser?'block':'none'}}">
+  <h1>Create user</h1>
+  {{username}}
+  <br />
+  <form on-submit="submit">
+    Username:            <input type="text"     value="{{username}}"  />
+    Email:               <input type="text"     value="{{email}}"     />
+    Password:            <input type="password" value="{{password}}"  />
+    Confirm password:    <input type="password" value="{{confirm}}"   />
+    <input type="submit" value="Create user" />
+  </form>
+  {{error}}
+</div>

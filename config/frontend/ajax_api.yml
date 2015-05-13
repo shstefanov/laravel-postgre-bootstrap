@@ -1,3 +1,5 @@
 endpoint: /api
 timeout: 10000
-defaultHeaders: {}
+defaultHeaders: 
+  Accept: application/json
+  Content-type: 'application/x-www-form-urlencoded'

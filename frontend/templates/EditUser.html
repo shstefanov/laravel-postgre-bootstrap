@@ -1,0 +1,10 @@
+<div class="screen" style="display: {{visibility.editUser?'block':'none'}}">
+  <h1>Edit user</h1>
+  {{currentUser.attributes.username}}
+  <br />
+  <form on-submit="submit">
+    Username: <input type="text" value="{{username}}"/>
+    Email:    <input type="text" value="{{email}}"/>
+    <input type="submit" value="Update" />
+  </form>
+</div>

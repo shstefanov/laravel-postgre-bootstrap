@@ -14,7 +14,9 @@ class VerifyCsrfToken extends BaseVerifier {
 	 */
 	public function handle($request, Closure $next)
 	{
-		return parent::handle($request, $next);
+    $next();
+  //   dd($request->headers->get("X-Access-Token"));
+		// return parent::handle($request, $next);
 	}
 
 }

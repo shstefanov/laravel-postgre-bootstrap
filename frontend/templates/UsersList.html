@@ -1,0 +1,10 @@
+<div class="screen" style="display: {{visibility.usersList?'block':'none'}}">
+  <h1>Users list</h1>
+  <ul>
+    {{#users.models}}
+      <li>{{attributes.username}} <a href="/users/{{id}}">edit</a></li>
+    {{/users.models}}
+    
+    
+  </ul>
+</div>

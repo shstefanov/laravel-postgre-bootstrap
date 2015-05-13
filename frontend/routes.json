@@ -1,6 +1,5 @@
 {
-  "/a/:aa": "goA",
-  "/a": "goA",
-  "/b": "goB",
-  "/c": ["goC", "goC.hide"]
+  "/users":      "users.list",
+  "/users/:id":  "users.edit",
+  "/create-user":"user.create" 
 }

@@ -67,12 +67,10 @@ var BaseRouter = Backbone.Router.extend({
       var routeName = this.routes[routePath];
       if(Array.isArray(routeName)){
         for(var i=0;i<routeName.length;i++){
-          console.log(routePath.replace(/^\//,""), routeName[i]);
           this.route(routePath.replace(/^\//,""), routeName[i]);
         }
       }
       else{
-        console.log(routePath.replace(/^\//,""), routeName);
         this.route(routePath.replace(/^\//,""), routeName);
       }
     }

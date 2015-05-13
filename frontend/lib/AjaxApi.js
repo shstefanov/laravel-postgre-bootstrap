@@ -67,7 +67,7 @@ AjaxApi.prototype.ajax = function(options, cb){
     payload = null;
   }
 
-  xhr.open(method, url);
+  xhr.open(method, url, true);
 
   for (var headerKey in allHeaders) {
     if (allHeaders.hasOwnProperty(headerKey)) {
