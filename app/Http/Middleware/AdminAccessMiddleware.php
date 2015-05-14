@@ -13,9 +13,6 @@ class AdminAccessMiddleware {
       "error" => "Not authorized"
     ]), 401);
 
-
-
-
 	}
 
 }

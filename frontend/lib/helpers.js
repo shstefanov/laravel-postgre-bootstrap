@@ -119,5 +119,14 @@ module.exports = {
       return new Prototype(objects);
     }
   },
+
+  deepExtend: function(target, source){
+    for(var key in source){
+      if(_.isObject(target[key]) && _.isObject(source[key])){
+        helpers.deepExtend(target[key], source[key]);
+      }
+      else { target[key] = source[key]; }
+    }
+  }
   
 };

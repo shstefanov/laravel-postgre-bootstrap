@@ -1,11 +1,11 @@
 <?php
 
-
-
-
-
 Route::resource('api/users', 'UsersController');
 
+Route::controllers([
+  'auth' => 'Auth\AuthController',
+  'password' => 'Auth\PasswordController',
+]);
 
 
 
@@ -21,8 +21,4 @@ Route::resource('api/users', 'UsersController');
 
 // Route::get('/', 'WelcomeController@index');
 
-// Route::controllers([
-// 	'auth' => 'Auth\AuthController',
-// 	'password' => 'Auth\PasswordController',
-// ]);
 
