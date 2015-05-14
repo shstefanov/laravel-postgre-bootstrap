@@ -5,3 +5,5 @@ logs
 database/db.log
 public/dist
 npm-debug.log
+config/frontend/development
+
