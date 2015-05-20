@@ -1,11 +1,20 @@
 <?php
 
-Route::resource('api/users', 'UsersController');
-
-Route::controllers([
-  'auth' => 'Auth\AuthController',
-  'password' => 'Auth\PasswordController',
+Infrastructure::build("panel", [
+  "route" => "test",
+  "view" => "index",
 ]);
+
+// Route::resource('api/users', 'UsersController');
+
+// Route::get("{a?}/{b?}/{c?}/{d?}/{e?}/{f?}/{g?}/{h?}/{i?}/{j?}/", function(){
+//   return view("index");
+// });
+
+// Route::controllers([
+//   'auth'     => 'Auth\AuthController',
+//   'password' => 'Auth\PasswordController',
+// ]);
 
 
 
