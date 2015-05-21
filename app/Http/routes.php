@@ -1,8 +1,9 @@
 <?php
 
-Infrastructure::build("panel", [
+Infrastructure::build("test", [
   "route" => "test",
-  "view" => "index",
+  "view"  => "index",
+  "controllers"=> ["UsersController"]
 ]);
 
 // Route::resource('api/users', 'UsersController');

@@ -53,4 +53,12 @@ class UsersController extends Controller {
     return '{"result": true}';
 	}
 
+
+
+
+
+  public function testAction($param, $otherParam = 12){
+    return $param;
+  }
+
 }
