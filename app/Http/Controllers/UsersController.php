@@ -58,7 +58,7 @@ class UsersController extends Controller {
 
 
   public function testAction($param, $otherParam = 12){
-    return $param;
+    return ["param1" => $param, "param2" => $otherParam];
   }
 
 }
