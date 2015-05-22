@@ -1,8 +1,8 @@
-var BaseAppController = require("App").AppController;
+var AppController = require("App").AppController;
 var helpers           = require("helpers");
 var api               = require("api");
 
-module.exports = BaseAppController.extend("AppController", {
+module.exports = AppController.extend("AppController", {
   getData: function(){
     var data = require("data");
     helpers.amap({
