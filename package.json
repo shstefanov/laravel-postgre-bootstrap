@@ -7,8 +7,6 @@
     "email": "s.h.stefanov@mail.bg"
   },
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "laravel-elixir": "*",
     "autoprefixer-loader": "latest",
     "backbone": "latest",
     "brfs": "latest",
@@ -32,6 +30,7 @@
     "script-loader": "latest",
     "source-map-loader": "latest",
     "style-loader": "latest",
+    "supports-color": "latest",
     "transform-loader": "latest",
     "uglify-loader": "latest",
     "underscore": "latest",
