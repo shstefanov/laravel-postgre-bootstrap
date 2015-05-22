@@ -2,15 +2,17 @@ var AppController = require("App").AppController;
 var helpers           = require("helpers");
 var api               = require("api");
 
+var controllers       = require("controllers");
+
 module.exports = AppController.extend("AppController", {
   getData: function(){
     var data = require("data");
     helpers.amap({
       users: function(cb){
-        api.ajax({method:"GET", url:"/users"}, function(err, response, xhr){
-          if(err) return cb(xhr.responseText);
+        controllers.UsersController.index(function(err, response){
+          if(err) return cb(err);
           data.users.initialized = true;
-          data.users.reset(JSON.parse(response));
+          data.users.reset(response);
         });
       }
     }, null, function(err){

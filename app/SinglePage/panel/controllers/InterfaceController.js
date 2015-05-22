@@ -1,14 +1,16 @@
-var Controller = require("App").Controller;
-var Layout     = require("../views/Layout.js");
+var App        = require("App");
+var Controller = App.Controller;
 var app;
 
 module.exports = Controller.extend("InterfaceController", {
-  initialize: function(options, _app){
-    app = _app;
+  
+  initialize: function(options){ app = require("app"); },
+
+  init: function(options){
     this.options = options;
-    this.layout = new Layout({
-      el: this.options.config.mvc.container,
-      data: require("data")
+    app.layout = new App.Views.Layout({
+      el:   options.config.ractive.container,
+      data: options.data
     });
   },
 
@@ -18,17 +20,17 @@ module.exports = Controller.extend("InterfaceController", {
     "user.create":"createUser"
   },
 
-  createUser: function(){ this.layout.radioToggle("visibility.createUser"); },
-  listUsers:  function(){ this.layout.radioToggle("visibility.usersList" ); },
+  createUser: function(){ app.layout.radioToggle("visibility.createUser"); },
+  listUsers:  function(){ app.layout.radioToggle("visibility.usersList" ); },
   editUser:   function(id){
-    this.layout.radioToggle("visibility.editUser");
-    var users = this.layout.get("users");
+    app.layout.radioToggle("visibility.editUser");
+    var users = app.layout.get("users");
     if(!users.initialized){
       return users.once("reset", function(){
-        this.layout.set("currentUser", users.get(id));
+        app.layout.set("currentUser", users.get(id));
       }, this);
     }
-    this.layout.set("currentUser", users.get(id));
+    app.layout.set("currentUser", users.get(id));
   },
 
 });

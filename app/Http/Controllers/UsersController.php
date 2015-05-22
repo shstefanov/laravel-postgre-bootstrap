@@ -23,17 +23,17 @@ use Illuminate\Support\Facades\Hash as Hash;
 class UsersController extends Controller {
 
   public function __construct(Request $request){ $this->middleware("admin"); }
-  public function store(Request $request){
-    $this->validate($request, [
+  public function store($userData){
+    $this->validate($userData, [
       "username" => "required",
       "email"    => "required|email", 
       "password" => "required"
     ]);
-    $credentials    = $request->only("email", "password", "username");
+    
     $user           = new \App\User();
-    $user->email    = $credentials["email"];
-    $user->password = Hash::make($credentials["password"]);
-    $user->username = $credentials["username"];
+    $user->email    = $$userData["email"];
+    $user->password = Hash::make($$userData["password"]);
+    $user->username = $$userData["username"];
     $user->save();
     return $user;
   }

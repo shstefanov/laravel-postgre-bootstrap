@@ -1,10 +1,8 @@
 var Controller = require("App").Controller;
-var app;
-var api = require("api");
+var controllers = require("controllers");
 
 module.exports = Controller.extend("InterfaceController", {
-  initialize: function(options, _app){
-    app = _app;
+  initialize: function(options){
     this.options = options;
     var data = require("data");
     var self = this;    
@@ -18,11 +16,7 @@ module.exports = Controller.extend("InterfaceController", {
   },
 
   updateUser: function(user, data){
-    api.ajax({
-      method: "PUT",
-      url:    "/users/"+user.id,
-      data:   data
-    }, function(err, response, xhr){
+    controllers.UsersController.update(user.toJSON(), function(err, response){
       if(err) console.error(response);
       user.set(JSON.parse(response));
     });
